@@ -6,7 +6,6 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../generated/prisma"
 }
 
 datasource db {
@@ -16,7 +15,7 @@ datasource db {
 
 model Lote {
   id       Int      @id @default(autoincrement())
-  nome     String
+  nome     String   @unique
   ativo    Boolean  @default(true)
   criadoEm DateTime @default(now()) @map("criado_em")
   boletos  Boleto[]

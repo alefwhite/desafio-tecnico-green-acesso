@@ -1,5 +1,5 @@
 import type { FastifyInstance, FastifyPluginAsync } from 'fastify'
-import { fileRoutes } from './files'
+import { boletosRoutes } from './boletos'
 
 export const setupRoutes: FastifyPluginAsync = async (app: FastifyInstance) => {
   app.get('/health-check', async (_, reply) => {
@@ -8,5 +8,5 @@ export const setupRoutes: FastifyPluginAsync = async (app: FastifyInstance) => {
 
   const globalPrefix = '/api'
 
-  app.register(fileRoutes, { prefix: globalPrefix })
+  app.register(boletosRoutes, { prefix: globalPrefix })
 }

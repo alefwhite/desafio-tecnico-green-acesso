@@ -1,9 +1,7 @@
 import { env } from '@/config/env'
 import { PrismaConnectionSingleton } from '@/database/prisma/connection'
-import type { PrismaClient } from '@prisma/client/extension'
+import type { PrismaClient } from '@prisma/client'
 
-function makePrismaConnection(): PrismaClient {
-  return PrismaConnectionSingleton.getInstance('file:./dev.db', env.NODE_ENV)
+export const makePrismaConnection = (): PrismaClient => {
+  return PrismaConnectionSingleton.getInstance(env.NODE_ENV)
 }
-
-export { makePrismaConnection }
