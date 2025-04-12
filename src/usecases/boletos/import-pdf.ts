@@ -28,7 +28,7 @@ export class ImportBoletosPdfUseCase {
     }
 
     // Criar diretório para os PDFs individuais
-    const outputDir = path.join(process.cwd(), 'temp', 'files', 'boletos')
+    const outputDir = path.join(process.cwd(), 'temp', 'boletos')
     if (!fs.existsSync(outputDir)) {
       fs.mkdirSync(outputDir, { recursive: true })
     }

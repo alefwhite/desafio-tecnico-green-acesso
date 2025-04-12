@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch src/server.ts",
+    "start": "tsx watch src/server.ts",
     "migrate:dev": "npx prisma migrate dev"
   },
   "keywords": [],
@@ -26,6 +26,7 @@
     "fastify": "^5.2.2",
     "pdf-lib": "^1.17.1",
     "pdf-parse": "^1.1.1",
+    "pdfkit": "^0.16.0",
     "zod": "^3.24.2"
   }
 }

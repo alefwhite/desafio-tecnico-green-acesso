@@ -6,11 +6,6 @@ export async function importBoletosPdf(
   reply: FastifyReply
 ) {
   try {
-    const multipartFile = await request.file()
-
-    if (!multipartFile)
-      return reply.status(400).send({ message: 'Arquivo não enviado!' })
-
     const file = await request.file()
 
     if (!file) {

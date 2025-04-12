@@ -135,7 +135,10 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+
 # Prisma
 generated
 prisma/*.db
 prisma/*.db-journal
+
+temp
