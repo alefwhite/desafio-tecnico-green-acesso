@@ -12,7 +12,7 @@ O projeto utiliza o Prisma como ORM, com um banco de dados SQLite para armazenam
    cd <seu-diretorio>
    ```
 2. Navegue até o diretório do projeto.
-3. Instale as dependências com `npm install`.
+3. Instale as dependências com `pnpm install`.
 
 ## Configuração do Ambiente
 1. Configure as variáveis de ambiente:
@@ -28,7 +28,7 @@ O projeto utiliza o Prisma como ORM, com um banco de dados SQLite para armazenam
 ## Uso
 Para iniciar o servidor, execute:
 ```bash
-npm start
+pnpm start
 ```
 
 ## Rotas
