@@ -3,7 +3,6 @@
 ## Introdução
 Este projeto é uma aplicação para gerenciar boletos, permitindo a importação de dados de boletos a partir de arquivos CSV e a geração de relatórios em PDF.
 
-O projeto utiliza o Prisma como ORM, com um banco de dados SQLite para armazenamento dos dados.
 
 ## Instalação
 1. Clone o repositório.
@@ -20,9 +19,9 @@ O projeto utiliza o Prisma como ORM, com um banco de dados SQLite para armazenam
    cp .env.example .env
    # Edite o arquivo .env com suas configurações
    ```
-2. Execute as migrações do banco de dados:
+2. O projeto utiliza o Prisma como ORM, com um banco de dados SQLite para armazenamento dos dados. Para criar e executar as migrações, utilize o comando:
    ```bash
-   npx prisma migrate dev
+   pnpm migrate:deploy
    ```
 
 ## Uso
@@ -30,6 +29,8 @@ Para iniciar o servidor, execute:
 ```bash
 pnpm start
 ```
+
+Para testar os endpoints, você pode usar o arquivo `routes.http` com uma extensão como o REST Client no VSCode.
 
 ## Rotas
 - **Importar CSV**: `POST /boletos/import`
@@ -47,6 +48,7 @@ pnpm start
 Os arquivos de exemplo estão localizados na pasta `files`:
 - `boletos.csv`: Exemplo de arquivo CSV para importação de boletos.
 - `boletos.pdf`: Exemplo de relatório em PDF gerado.
+- `Insomnia_2025-04-11`: Coleção de uso do Insomnia para testar os endpoints.
 
 Certifique-se de que os arquivos de exemplo estão no formato correto antes de usá-los nas rotas correspondentes.
 

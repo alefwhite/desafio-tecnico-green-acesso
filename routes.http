@@ -1,0 +1,27 @@
+### Importar Boletos CSV
+POST http://localhost:3000/api/boletos/csv
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="file"; filename="boletos.csv"
+Content-Type: text/csv
+
+< ./files/boletos.csv
+--boundary--
+
+### Importar Boletos PDF
+POST http://localhost:3000/api/boletos/pdf
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="file"; filename="boletos_fake.pdf"
+Content-Type: application/pdf
+
+< ./files/boletos_fake.pdf
+--boundary--
+
+### Obter Boletos com Filtros
+GET http://localhost:3000/api/boletos?nome=JOSE&valor_inicial=100&valor_final=200&id_lote=2
+
+### Obter Boletos
+GET http://localhost:3000/api/boletos

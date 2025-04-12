@@ -1,0 +1,136 @@
+type: collection.insomnia.rest/5.0
+name: Desafio Backend
+meta:
+  id: wrk_3104e2071fc94686b6af9ac94af940be
+  created: 1744262825400
+  modified: 1744262825400
+collection:
+  - url: "{{ _.url }}/api/boletos/csv"
+    name: Import CSV
+    meta:
+      id: req_c1f680a6d2994b8ea09c15105cd5a70c
+      created: 1744262825426
+      modified: 1744421335305
+      isPrivate: false
+      sortKey: -1729666700042
+    method: POST
+    body:
+      mimeType: multipart/form-data
+      params:
+        - id: pair_8556bcb1686e43f9ac754c6e36711c99
+          name: file
+          disabled: false
+          type: file
+          fileName: C:\MeusProjetos\desafio-tecnico-green-acesso\temp\files\boletos.csv
+    headers:
+      - name: Content-Type
+        value: multipart/form-data
+      - name: User-Agent
+        value: insomnia/9.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.url }}/api/boletos/pdf"
+    name: Import PDF
+    meta:
+      id: req_706d299f93b0406a8886df5fb89d29ad
+      created: 1744270483687
+      modified: 1744421340426
+      isPrivate: false
+      sortKey: -1729084703828.5
+    method: POST
+    body:
+      mimeType: multipart/form-data
+      params:
+        - id: pair_8556bcb1686e43f9ac754c6e36711c99
+          name: file
+          disabled: false
+          type: file
+          fileName: C:\MeusProjetos\desafio-tecnico-green-acesso\temp\files\boletos_fake.pdf
+    headers:
+      - name: Content-Type
+        value: multipart/form-data
+      - name: User-Agent
+        value: insomnia/9.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.url }}/api/boletos"
+    name: Get Boletos
+    meta:
+      id: req_5391d94826b64a3f999682820a79c35b
+      created: 1744403084735
+      modified: 1744418338769
+      isPrivate: false
+      sortKey: -1728793705721.75
+    method: GET
+    parameters:
+      - id: pair_052f48d7e84e4ab19175fc153bad5778
+        name: nome
+        value: jose
+        disabled: true
+      - id: pair_41c3a1cedf9844e6bee06dec7390a537
+        name: valorInicial
+        value: "178"
+        disabled: true
+      - id: pair_db2256ad51e4468f9fee4df2f741be8a
+        name: relatorio
+        value: "1"
+        disabled: false
+    headers:
+      - name: User-Agent
+        value: insomnia/9.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_3577bcbe68fc4b65b4fcecee31225a18
+    created: 1744262825413
+    modified: 1744262825413
+  cookies:
+    - key: refreshToken
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiT1dORVIiLCJuYW1lIjoiQWxlZiBXaGl0ZSIsImVtYWlsIjoiYWxlZndoaXRlQGdtYWlsLmNvbSIsInN1YiI6ImRiZDIyYzdmLTJiZjctNDBkMy1hODIzLTZhMmRmZmQwMmJkNCIsImlhdCI6MTc0MzA0Njc0OSwiZXhwIjoxNzQzNjUxNTQ5fQ.GPEgR4b5YUAMBJ1j3Y1z8ix4vDKAMtMB8IdlM3xnC6Y
+      domain: localhost
+      path: /
+      secure: true
+      httpOnly: true
+      hostOnly: true
+      creation: 2024-05-27T00:48:01.751Z
+      lastAccessed: 2025-03-27T03:39:09.364Z
+      sameSite: strict
+      id: 99ed4301-10a7-4ef4-a125-2e766056c44e
+environments:
+  name: Base Environment
+  meta:
+    id: env_6438680e22d74314baa1d6444639fbbd
+    created: 1744262825404
+    modified: 1744262825404
+    isPrivate: false
+  subEnvironments:
+    - name: Local
+      meta:
+        id: env_45892867640a4fd0a032f778f17549ec
+        created: 1744262825405
+        modified: 1744262948233
+        isPrivate: false
+        sortKey: 1716760901481
+      data:
+        url: http://localhost:3000
+      color: "#6fbc10"
