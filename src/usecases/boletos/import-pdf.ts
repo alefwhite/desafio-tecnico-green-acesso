@@ -3,6 +3,7 @@ import { makePrismaConnection } from '@/database/factories/connection'
 import * as fs from 'node:fs'
 import * as path from 'node:path'
 import { PDFDocument } from 'pdf-lib'
+import { BoletosCountInvalidError } from '../errors/boletos-count-invalid'
 
 interface ImportPdfBoletoDTO {
   file: MultipartFile
@@ -22,9 +23,7 @@ export class ImportBoletosPdfUseCase {
     })
 
     if (boletos.length !== pdfDoc.getPageCount()) {
-      throw new Error(
-        `O número de páginas no PDF (${pdfDoc.getPageCount()}) não corresponde ao número de boletos no banco (${boletos.length})`
-      )
+      throw new BoletosCountInvalidError(pdfDoc.getPageCount(), boletos.length)
     }
 
     // Criar diretório para os PDFs individuais
