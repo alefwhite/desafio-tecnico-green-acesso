@@ -34,5 +34,6 @@ model Boleto {
   lote   Lote @relation(fields: [loteId], references: [id])
   loteId Int  @map("id_lote")
 
+  @@unique([nomeSacado, linhaDigitavel, loteId])
   @@map("boletos")
 }
