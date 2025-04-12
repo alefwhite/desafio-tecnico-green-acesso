@@ -7,8 +7,8 @@ Este projeto é uma aplicação para gerenciar boletos, permitindo a importaçã
 ## Instalação
 1. Clone o repositório.
    ```bash
-   git clone <seu-repositorio>
-   cd <seu-diretorio>
+   git clone git@github.com:alefwhite/desafio-tecnico-green-acesso.git
+   cd desafio-tecnico-green-acesso
    ```
 2. Navegue até o diretório do projeto.
 3. Instale as dependências com `pnpm install`.
